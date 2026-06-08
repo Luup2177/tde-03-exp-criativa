@@ -614,3 +614,270 @@
         .icon-insta { background: var(--rose-pale); }
         .contact-card-title { font-weight: 600; font-size: 1.15rem; color: var(--brown-dark); }
         .contact-card-sub { font-size: 0.98rem; color: var(--text-muted); }
+    
+        /* Responsivo */
+        @media (max-width: 1024px) {
+
+          /* NAV */
+          nav {
+            padding: 0 1.5rem;
+          }
+
+          /* HERO */
+          .hero-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+          }
+          .hero-eyebrow {
+            justify-content: center;
+          }
+          .hero-eyebrow::before {
+            display: none;
+          }
+          .hero-actions {
+            justify-content: center;
+          }
+          .hero-stats {
+            justify-content: center;
+            gap: 4rem;
+          }
+
+          /* SOBRE */
+          .about-grid {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            text-align: center;
+          }
+          .about-visual {
+            order: -1;
+          }
+          .about-feature {
+            text-align: left;
+          }
+
+          /* FORMULÁRIO */
+          .order-grid {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+          }
+        }
+
+        @media (max-width: 768px) {
+
+          /* NAV — menu hambúrguer */
+          nav {
+            padding: 0 1.25rem;
+            height: 60px;
+            position: relative;
+          }
+
+          .nav-links {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: rgba(250, 246, 240, 0.98);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--rose-light);
+            flex-direction: column;
+            gap: 0;
+            padding: 0.5rem 0;
+            z-index: 999;
+          }
+
+          .nav-links.open {
+            display: flex;
+          }
+
+          .nav-links li {
+            width: 100%;
+          }
+
+          .nav-links a {
+            display: block;
+            padding: 0.9rem 1.5rem;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--rose-light);
+          }
+
+          .nav-links a:hover {
+            border-bottom: 1px solid var(--rose-light);
+            background: var(--rose-pale);
+          }
+
+          /* Botão hambúrguer */
+          .nav-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.25rem;
+            color: var(--brown);
+          }
+
+          .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--brown);
+            border-radius: 2px;
+            transition: all 0.3s;
+          }
+
+          .nav-toggle.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+          }
+          .nav-toggle.open span:nth-child(2) {
+            opacity: 0;
+          }
+          .nav-toggle.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+          }
+
+          .nav-logo {
+            height: 50px;
+            width: 50px;
+          }
+
+          /* HERO */
+          .hero {
+            padding: 5rem 1.25rem 3rem;
+            text-align: center;
+          }
+
+          .hero-content {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+          }
+
+          .hero h1 {
+            font-size: clamp(2rem, 8vw, 3rem);
+          }
+
+          .hero-stats {
+            gap: 3rem;
+            margin-top: 2rem;
+          }
+
+          .stat-num {
+            font-size: 2.8rem;
+          }
+
+          /* SEÇÕES GERAIS */
+          section {
+            padding: 3.5rem 1.25rem;
+          }
+
+          /* SOBRE */
+          .about-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+          }
+
+          .about-circle-main {
+            width: 240px;
+            height: 240px;
+            font-size: 5rem;
+          }
+
+          .about-circle-sm-1 {
+            width: 70px;
+            height: 70px;
+            top: 0;
+            right: -5px;
+          }
+
+          .about-circle-sm-1 img {
+            width: 70px !important;
+            height: 70px !important;
+          }
+
+          .about-circle-sm-2 {
+            width: 60px;
+            height: 60px;
+          }
+
+          .about-feature {
+            text-align: left;
+          }
+
+          /* PRODUTOS */
+          .products-grid {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+          }
+
+          /* DEPOIMENTOS */
+          .testimonials-grid {
+            grid-template-columns: 1fr;
+          }
+
+          /* FORMULÁRIO */
+          .order-grid {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+
+          .order-form {
+            padding: 1.5rem;
+          }
+
+          .form-row {
+            grid-template-columns: 1fr;
+          }
+
+          .contact-cards {
+            gap: 1rem;
+          }
+
+          .contact-card {
+            gap: 1rem;
+            flex-wrap: wrap;
+          }
+
+          /* FOOTER */
+          footer {
+            flex-direction: column;
+            height: auto;
+            padding: 1.25rem;
+            gap: 0.4rem;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 480px) {
+
+          .hero h1 {
+            font-size: 1.9rem;
+          }
+
+          .hero-actions {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .btn-primary,
+          .btn-outline {
+            width: 100%;
+            text-align: center;
+          }
+
+          .stat-num {
+            font-size: 2.2rem;
+          }
+
+          .about-circle-main {
+            width: 200px;
+            height: 200px;
+          }
+
+          .section-title {
+            font-size: 1.6rem;
+          }
+        }
