@@ -104,11 +104,11 @@ function submitForm() {
     const det     = document.querySelector('textarea').value || '';
 
     const msg = `Olá Fabi! Gostaria de solicitar um orçamento:\n\n*Nome:* ${nome}\n*WhatsApp:* ${tel}\n*Ocasião:* ${ocasiao}\n*Quantidade:* ${qtd}\n*Detalhes:* ${det}`;
-    window.open(`https://wa.me/5541991148976?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open(`https://wa.me/pessoal?text=${encodeURIComponent(msg)}`, '_blank');
 }
 ```
 
-**Número de destino:** `+55 41 99114-8976`
+**Número de destino:** ` pessoal`
 
 ## Paleta de Cores
 
